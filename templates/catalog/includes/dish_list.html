@@ -1,0 +1,31 @@
+<div class="c_dishes" id="c_dishes">
+    {% for dish in dishes %}
+        <div id="dish_{{dish.id}}" class="dish">
+            <div class="dish__count">
+                <div class="dish__count-value" style="{% if dish.count > 0 %} display: block; {% endif %}">{{ dish.count }} шт.</div>
+            </div>
+            <div class="dish__img">
+                {% for image in dish.images.all %}
+                    {% if image.is_main_image %}
+                        <img src="{{ image.thumbnail.url }} "/>
+                    {% endif %}
+                {% endfor %}
+                <div class="dish__img-special-info">
+                    <div class="dish__img-special-info-weight">1000 г.</div>
+                </div>
+            </div>
+            <h2 class="dish___title">{{dish.title}}</h2>
+            <div class="dish__description">{{dish.description}}</div>
+            <div class="dish__price">{{dish.price}} руб.</div>
+            <div class="dish__buttons">
+                <div class="e_button e_button__primary engine-ajax-request" href="{% url 'order-dish_add' dish.id %}">
+                    Добавить
+                </div>
+                {% if dish.count %}
+                    {#<div class="dish__item-remove-btn engine-ajax-request" href="{% url 'order-remove_dish' dish.id %}">Меньше</div>#}
+                {% endif %}
+            </div>
+        </div>
+    {% endfor %}
+    <script type="text/javascript">engine.component_register('c_dishes');</script>
+</div>

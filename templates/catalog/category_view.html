@@ -1,0 +1,18 @@
+{% extends "./catalog_generic.html" %}
+
+{% block title %}
+<title>Delivery</title>
+{% endblock %}
+
+{% block  header %}
+    {% include "./includes/header.html" %}
+{% endblock %}
+
+{% block sidebar %}
+  {% include "./includes/sidebar.html" with categories=categories %}
+{% endblock %}
+
+
+{% block content %}
+    {% include "./includes/dish_list.html" %}
+{% endblock %}

@@ -1,0 +1,6 @@
+<div class="c_header">
+    <a class="c_header__logo" href="{% url 'index' %}">Delivery</a>
+    {% if not basket_hide %}
+        {% include "./c_basket.html" %}
+    {% endif %}
+</div>

@@ -1,0 +1,38 @@
+.flash-messages {
+	position: absolute;
+	top: 0;
+	z-index: 999;
+}
+
+.f_message {
+	max-width: 400px;
+	padding: 20px;
+	background-color: #1e88e5;
+	border-radius: 2px;
+	color: #fff;
+	margin-bottom: 10px;
+	vertical-align: middle;
+	font-size: 18px;
+	opacity: 0.97;
+	box-shadow: 0 4px 5px 0 rgba(0,0,0,0.14), 0 1px 10px 0 rgba(0,0,0,0.12), 0 2px 4px -1px rgba(0,0,0,0.3);
+	animation: f_message_animate .2s;
+	cursor: pointer;
+}
+
+.f_message_info {
+	background-color: #1e88e5;
+}
+
+.f_message_alert {
+	background-color: #ef5350;
+}
+
+@keyframes f_message_animate {
+	0% {
+		margin-left: -400px;
+	}
+
+	100% {
+		margin-left: 0px;
+	}
+}

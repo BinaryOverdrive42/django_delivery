@@ -1,0 +1,10 @@
+app.db
+*.sqlite3
+.idea*
+*.pyc
+venv/*
+static/media/uploads/*
+catalog/migrations/*
+*/__pycache__/
+__pycache__/*
+.venv/

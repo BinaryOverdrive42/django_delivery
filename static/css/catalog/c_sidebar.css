@@ -1,0 +1,23 @@
+.categories {
+	display: flex;
+	display: -webkit-flex;
+	display: -moz-flex;
+	flex-direction: column;
+	/*position: fixed;*/
+	z-index: 2;
+}
+
+.category {
+	padding: 0 10px;
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 28px;
+	color: #4e342e;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+.category:hover {
+	text-decoration: none;
+	color: #9575cd;
+}

@@ -1,0 +1,21 @@
+.confirmation {
+    display: flex;
+    width: 100%;
+    margin: 20px auto;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.confirmation__form,
+.confirmation__order {
+    width: 100%;
+    min-width: 200px;
+    max-width: 400px;
+    margin-bottom: 20px;
+}
+
+.confirmation__order-price {
+    font-size: 20px;
+    font-weight: 700;
+    margin: 5px;
+}

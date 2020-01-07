@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  {% block title %}<title>Delivery</title>{% endblock %}
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% load static %}
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="{% static 'css/core/engine.css' %}"/>
+    <link rel="stylesheet" href="{% static 'css/catalog/container.css' %}"/>
+    <link rel="stylesheet" href="{% static 'css/core/flash_message.css' %}"/>
+    <link rel="stylesheet" href="{% static 'css/shared/includes/form_snippet.css' %}"/>
+    <script src="{% static 'js/core/engine.js' %}"></script>
+    <script src="{% static 'js/core/flash_message.js' %}"></script>
+
+    {% block  styles %}{% endblock %}
+
+    {% block  scripts %}{% endblock %}
+
+
+</head>
+
+<body>
+    {% block header %}
+    {% endblock %}
+
+  <div class="c_container">
+      <div class="c_container__sidebar">
+          {% block sidebar %}
+          {% endblock %}
+      </div>
+      <div class="c_container__content">
+          {% block content %}
+          {% endblock %}
+      </div>
+  </div>
+</body>
+</html>

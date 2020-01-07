@@ -1,0 +1,17 @@
+<div class="c_basket" id="c_basket">
+    <div class="c_basket__header">
+        Корзина:
+        <div class="c_basket__price catalog-order-price">
+            {% if order.price > 0 %}
+                {{order.price}} руб.
+            {% else %}
+                0 руб.
+            {% endif %}
+        </div>
+    </div>
+    <div class="c_basket__body">
+        {% include './dish_list_inline.html' %}
+        <div href="{% url 'order-check_order' %}" class="c_basket__confirm e_button__primary engine-ajax-request">Продолжить оформление</div>
+    </div>
+    <script type="text/javascript">engine.component_register('c_basket');</script>
+</div>

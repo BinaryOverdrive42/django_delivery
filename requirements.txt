@@ -1,0 +1,10 @@
+certifi==2018.11.29
+chardet==3.0.4
+Django==2.1.5
+idna==2.8
+Pillow==5.4.1
+python-resize-image==1.1.18
+pytz==2018.9
+requests==2.21.0
+urllib3==1.24.1
+python-memcached==1.59

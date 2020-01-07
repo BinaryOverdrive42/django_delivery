@@ -1,0 +1,7 @@
+<div class="c_sidebar">
+    <div class="categories">
+        {% for category in categories %}
+            <a class="category" href="{% url 'category' category.slug %}">{{category.title}}</a>
+        {% endfor %}
+    </div>
+</div>

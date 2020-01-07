@@ -1,0 +1,73 @@
+
+.c_dishes-inline {
+    z-index: 6;
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+}
+
+.c_dishes-inline__dish {
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    /*box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2);*/
+    border: 1px solid #9575cd;
+    border-radius: 2px;
+    padding: 5px;
+    width: 100%;
+    margin: 5px 0;
+    font-size: 14px;
+    font-weight: 700;
+    color: #9575cd;
+    justify-content: space-between;
+}
+
+.c_dishes-inline__dish-image {
+    height: 44px;
+    width: 66px;
+    border: 1px solid #000;
+}
+
+.c_dishes-inline__dish-info {
+    padding: 0 5px;
+    width: 100%;
+}
+
+.c_dishes-inline__dish-count {
+    display: flex;
+    align-items: center;
+    padding: 0 5px;
+    color: #333;
+    /*min-width: 55px;*/
+}
+
+.c_dishes-inline__dish-price {
+    color: #333;
+}
+
+.c_dishes-inline__buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 10px;
+}
+
+.c_dishes-inline__dish-remove-btn,
+.c_dishes-inline__dish-add-btn {
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.c_dishes-inline__dish-clear-btn {
+    font-size: 10px;
+    position: absolute;
+    right: 0;
+    padding: 3px;
+    cursor: pointer;
+}
+
+.c_dishes-inline__dish-add-btn:hover,
+.c_dishes-inline__dish-remove-btn:hover,
+.c_dishes-inline__dish-clear-btn:hover {
+    color: #7e57c2;
+}

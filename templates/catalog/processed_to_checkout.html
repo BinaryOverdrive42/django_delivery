@@ -1,0 +1,26 @@
+{% extends "./catalog_generic.html" %}
+
+{% block title %}
+<title>Delivery</title>
+{% endblock %}
+
+{% block  header %}
+    {% include "./includes/header.html" %}
+{% endblock %}
+
+{% block sidebar %}
+  {% include "./includes/sidebar.html" %}
+{% endblock %}
+
+{% block content %}
+    <div class="confirmation">
+        <div class="confirmation__form">
+            {% url 'order-confirm' as form_url %}
+            {% include "shared/includes/form_snippet.html" with form=form form_action=form_url form_set_submit=True form_submit_value='Оформить' ajax=True%}
+        </div>
+        <div class="confirmation__order">
+            <div class="confirmation__order-price">Сумма заказа: <span class="catalog-order-price">{{order.price}} руб.</span></div>
+            {% include './includes/dish_list_inline.html' %}
+        </div>
+    </div>
+{% endblock %}

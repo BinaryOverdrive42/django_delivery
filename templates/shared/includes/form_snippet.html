@@ -1,0 +1,15 @@
+<form method="post" action="{{form_action}}" id="{{form.prefix}}" class="form">
+    {% csrf_token %}
+    {% for field in form %}
+    <div class="form__field">
+        {{ field.errors }}
+        {{ field.label_tag }} {{ field }}
+        {% if field.help_text %}
+        <span class="form__field-help">{{ field.help_text|safe }}</span>
+        {% endif %}
+    </div>
+    {% endfor %}
+    {% if form_set_submit %}
+        <input type="submit" class="e_button e_button__primary {% if ajax %}engine-form-submit{% endif %}" value="{{form_submit_value}}">
+    {% endif %}
+</form>

@@ -1,0 +1,11 @@
+{% extends "shared/base_generic.html" %}
+
+{% block  styles %}
+    {% include "./includes/styles.html" %}
+{% endblock %}
+
+{% block  scripts %}
+    {% include "./includes/scripts.html" %}
+    <script type="text/javascript">engine.component_register('catalog');</script>
+{% endblock %}
+

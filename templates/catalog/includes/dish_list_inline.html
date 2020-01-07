@@ -1,0 +1,20 @@
+<div class="c_dishes-inline" id="c_dishes-inline">
+    {% for order_dish in order.order_dish.all %}
+    <div class="c_dishes-inline__dish">
+        <!-- <div class="c_dishes-inline__dish-image"></div> -->
+        <div class="c_dishes-inline__dish-info">
+            <div class="c_dishes-inline__dish-title">{{order_dish.dish.title}}</div>
+            <div class="c_dishes-inline__dish-price">{{order_dish.dish.price}} руб.</div>
+        </div>
+        <div class="c_dishes-inline__dish-count">{{order_dish.count}} шт.</div>
+        <div class="c_dishes-inline__buttons">
+            <div class="c_dishes-inline__dish-add-btn glyphicon glyphicon-triangle-top engine-ajax-request"
+                 href="{% url 'order-dish_add' order_dish.dish.id %}"></div>
+            <div class="c_dishes-inline__dish-remove-btn glyphicon glyphicon-triangle-bottom engine-ajax-request"
+                 href="{% url 'order-dish_remove' order_dish.dish.id %}"></div>
+        </div>
+        <div class="c_dishes-inline__dish-clear-btn glyphicon glyphicon-remove engine-ajax-request"
+             href="{% url 'order-dish_clear' order_dish.dish.id %}"></div>
+    </div>
+    {% endfor %}
+</div>
